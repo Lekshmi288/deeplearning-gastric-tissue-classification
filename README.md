@@ -12,8 +12,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 ---
 
-## 🧠 Objectives
-
+## Project Plan
 - ✅ Develop a baseline binary classifier (Tumor vs Non-Tumor) for prototyping
 - ⏳ Extend to multi-class classification (8 TME tissue types)
 - ⏳ Use transfer learning (e.g., ResNet, EfficientNet)
@@ -24,7 +23,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 **Source**: HMU-GC-HE-30K Dataset
 **Format**: 224×224 image tiles  
@@ -39,12 +38,9 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 - `MUS` – Smooth muscle  
 - `DEB` – Debris  
 
-> ⚠️ Note: This is not a normal-vs-cancer dataset. All patches come from gastric cancer samples. Labels represent **TME composition**, not pathology status.
-
-
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 deeplearning-gastric-tissue-classification/
 ├── Data/ # Raw image patches (not uploaded)
@@ -56,7 +52,7 @@ deeplearning-gastric-tissue-classification/
 
 ---
 
-## 🛠️ Progress Tracker
+## Progress Tracker
 
 - [x] Environment setup
 - [x] Dataset exploration
@@ -71,3 +67,5 @@ deeplearning-gastric-tissue-classification/
 ## 📌 Notes
 
 - Some tissue classes (e.g., adipose, smooth muscle) are biologically “normal” tissues but still part of the **tumor context** and can play roles in progression or immune evasion.
+- This is not a normal-vs-cancer dataset. All patches come from gastric cancer samples. Labels represent **TME composition**, not pathology status.
+
