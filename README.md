@@ -40,14 +40,14 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 ---
 
-## Project Structure
+## Repository Structure
 
-deeplearning-gastric-tissue-classification/
-├── Data/ # Raw image patches (not uploaded)
-├── notebooks/ # EDA, training notebooks
-├── src/ # Python scripts (training, models, utils)
-├── outputs/ # Saved models, logs, metrics
-└── README.md
+- `deeplearning-gastric-tissue-classification/`
+  - `Data/` – Raw image patches (not uploaded)
+  - `notebooks/` – EDA, training notebooks
+  - `src/` – Python scripts (training, models, utils)
+  - `outputs/` – Saved models, logs, metrics
+  - `README.md`
 
 
 ---
