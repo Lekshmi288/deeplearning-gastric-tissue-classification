@@ -18,7 +18,7 @@ Leverage the HMU-GC-HE-30K dataset from Lou et al. 2025 (https://www.nature.com/
 
 ## 📊 Dataset
 
-**Source**: [HMU-GC-HE-30K Dataset (Kaggle)]  
+**Source**: HMU-GC-HE-30K Dataset
 **Format**: 224×224 image tiles  
 **Classes** (all tumor microenvironment components):
 
