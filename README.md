@@ -43,6 +43,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 ## Project Structure
 
 deeplearning-gastric-tissue-classification/
+
 ├── Data/ # Raw image patches (not uploaded)
 ├── notebooks/ # EDA, training notebooks
 ├── src/ # Python scripts (training, models, utils)
