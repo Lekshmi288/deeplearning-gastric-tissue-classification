@@ -1,0 +1,8 @@
+Data/
+__pycache__/
+*.pyc
+.env
+outputs/
+.DS_Store
+.ipynb_checkpoints/
+gastric-tissue/
