@@ -13,8 +13,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 ---
 
 ## Project Plan
-- ✅ Develop a baseline binary classifier (Tumor vs Non-Tumor) for prototyping
-- ⏳ Extend to multi-class classification (8 TME tissue types)
+- ⏳ Multi-class classification (8 TME tissue types)
 - ⏳ Use transfer learning (e.g., ResNet, EfficientNet)
 - ⏳ Apply Grad-CAM for interpretability
 - ⏳ Explore patch-level TME composition analysis per patient
