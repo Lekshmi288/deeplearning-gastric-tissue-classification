@@ -1,6 +1,15 @@
 # Deep Learning for Gastric Tumor Microenvironment (TME) Classification
 
-Leverage the HMU-GC-HE-30K dataset from Lou et al. 2025 (https://www.nature.com/articles/s41597-025-04489-9)  to build deep learning models that classify histological image patches into eight tumor microenvironment (TME) tissue types. TME components play a critical role in gastric cancer progression, immune tolerance, and treatment response. However, detailed TME-annotated image datasets are scarce. This dataset addresses that gap by providing 30,000+ expert-labeled patches across eight biologically meaningful tissue types, along with matched clinical metadata. Unlike simple tumor vs non-tumor classification, which provides only coarse segmentation, TME-based classification captures the diverse cellular and structural components within the tumor region that are known to influence tumor progression, immune evasion, and treatment response. By modeling these fine-grained patterns, the goal is to explore TME composition patterns in gastric cancer, link them with patient metadata, and lay the groundwork for biomarker discovery and prognosis modeling.
+Leverage the [HMU-GC-HE-30K dataset](https://www.nature.com/articles/s41597-025-04489-9) from Lou et al. (2025) to build deep learning models that classify histological image patches into eight tumor microenvironment (TME) tissue types.
+
+TME components play a critical role in gastric cancer progression, immune tolerance, and treatment response. However, detailed TME-annotated image datasets are scarce. This dataset addresses that gap by providing 30,000+ expert-labeled patches across eight biologically meaningful tissue types, along with matched clinical metadata.
+
+Unlike simple tumor vs non-tumor classification, which provides only coarse segmentation, TME-based classification captures the diverse cellular and structural components within the tumor region that are known to influence tumor progression, immune evasion, and treatment response. By modeling these fine-grained patterns, the goal is to:
+
+- Explore TME composition patterns in gastric cancer
+- Link tissue patterns with clinical features
+- Lay the groundwork for biomarker discovery and prognosis modeling
+
 ---
 
 ## 🧠 Objectives
