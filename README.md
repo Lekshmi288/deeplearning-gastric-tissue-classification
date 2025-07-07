@@ -55,8 +55,8 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 - [x] Environment setup
 - [x] Dataset exploration
-- [ ] Binary classification pipeline (Tumor vs Non-Tumor)
-- [ ] Multi-class classifier for all 8 tissue types
+- [ ] Baseline Multi-class classifier for all 8 tissue types
+- [ ] FIne tuned multi-class classifier for all 8 tissue types
 - [ ] Grad-CAM visualizations for model explanation
 - [ ] Compute TME composition (% per tissue per patient)
 - [ ] Merge image-level features with clinical metadata
