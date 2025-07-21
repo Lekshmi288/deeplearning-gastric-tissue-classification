@@ -9,6 +9,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 - Building and evaluating deep learning models for patch-level TME classification
 - Using Grad-CAM and prediction confidence to interpret model decisions
 - Identifying common failure cases and potential data issues through visualization
+- Building an interactive Streamlit app to audit model predictions and visualize Grad-CAM heatmaps, helping bridge the gap between AI-based histology models and expert review in high-stakes domains like cancer diagnosis.
 
 ---
 
