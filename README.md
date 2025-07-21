@@ -52,7 +52,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 ---
 
-## PathoPredictX-GC: Interactive Auditing & Interpretability Tool
+## [PathoPredictX-GC](https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC): Interactive Auditing & Interpretability Tool
 
 As part of this project, I built PathoPredictX-GC, a lightweight Streamlit app that enables visual auditing of model predictions in gastric cancer histopathology.
 
