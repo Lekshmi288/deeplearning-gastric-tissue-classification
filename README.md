@@ -92,11 +92,17 @@ Use it here: https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC
 deeplearning-gastric-tissue-classification/
 │
 ├── notebooks/               # EDA, training notebooks
+
 ├── validation_results/      # csv files showing the validation results 
+
 ├── PathoPredictX-GC-app/    # Streamlit app files
+
 │   ├── src/
+
 │   ├── Dockerfile
+
 │   └── requirements.txt
+
 └── README.md
 
 
