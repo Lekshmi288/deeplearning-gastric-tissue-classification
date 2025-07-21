@@ -50,6 +50,8 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 - Early stopping and learning rate scheduling
 - Model evaluation using macro F1 and confusion matrix
 
+---
+
 ## PathoPredictX-GC: Interactive Auditing & Interpretability Tool
 
 As part of this project, I built PathoPredictX-GC, a lightweight Streamlit app that enables visual auditing of model predictions in gastric cancer histopathology.
@@ -82,7 +84,9 @@ This tool supports interpretability, quality control, and human-AI collaboration
     Helps researchers identify blind spots in model performance and surface underlying data issues.
 
 Use it here: https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC
-    
+
+---
+
 ## Repository Structure
 
 deeplearning-gastric-tissue-classification/
