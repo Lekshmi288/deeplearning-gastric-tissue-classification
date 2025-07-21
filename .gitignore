@@ -8,5 +8,6 @@ outputs/
 gastric-tissue/
 spams-python/
 Models/
+PathoPredictX-GC/src/efficientnetb3_baseline.h5 
 Image classification.ipynb
 PathoPredictX-GC/src/sample_images
