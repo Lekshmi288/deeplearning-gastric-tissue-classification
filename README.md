@@ -58,30 +58,30 @@ As part of this project, I built PathoPredictX-GC, a lightweight Streamlit app t
 
 Key Features:
 
-    Predicts tissue type from any 224×224 histology patch
+   - Predicts tissue type from any 224×224 histology patch
 
-    Visualizes class-specific attention using Grad-CAM
+   - Visualizes class-specific attention using Grad-CAM
 
-    Displays prediction confidence alongside ground truth
+   - Displays prediction confidence alongside ground truth
 
-    Helps spot:
+   - Helps spot:
 
-        Model confusion in mixed-tissue regions
+       - Model confusion in mixed-tissue regions
 
-        Label noise or annotation errors
+       - Label noise or annotation errors
 
-        Poor staining or image artifacts
+       - Poor staining or image artifacts
 
 
 Why it matters:
 
 This tool supports interpretability, quality control, and human-AI collaboration:
 
-    When predictions diverge from the ground truth, Grad-CAM helps assess whether the model made a biologically reasonable call, which is useful for identifying label issues.
+   - When predictions diverge from the ground truth, Grad-CAM helps assess whether the model made a biologically reasonable call, which is useful for identifying label issues.
 
-    In the absence of ground truth, confidence scores and attention maps provide a second-opinion system for expert review.
+   - In the absence of ground truth, confidence scores and attention maps provide a second-opinion system for expert review.
 
-    Helps researchers identify blind spots in model performance and surface underlying data issues.
+   - Helps researchers identify blind spots in model performance and surface underlying data issues.
 
 Use it here: https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC
 
