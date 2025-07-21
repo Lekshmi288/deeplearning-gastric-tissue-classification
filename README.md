@@ -60,17 +60,11 @@ As part of this project, I built PathoPredictX-GC, a lightweight Streamlit app t
 Key Features:
 
    - Predicts tissue type from any 224×224 histology patch
-
    - Visualizes class-specific attention using Grad-CAM
-
    - Displays prediction confidence alongside ground truth
-
    - Helps spot:
-
        - Model confusion in mixed-tissue regions
-
        - Label noise or annotation errors
-
        - Poor staining or image artifacts
 
 
