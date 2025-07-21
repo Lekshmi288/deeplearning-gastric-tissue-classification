@@ -73,9 +73,7 @@ Why it matters:
 This tool supports interpretability, quality control, and human-AI collaboration:
 
    - When predictions diverge from the ground truth, Grad-CAM helps assess whether the model made a biologically reasonable call, which is useful for identifying label issues.
-
    - In the absence of ground truth, confidence scores and attention maps provide a second-opinion system for expert review.
-
    - Helps researchers identify blind spots in model performance and surface underlying data issues.
 
 Use it here: https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC
