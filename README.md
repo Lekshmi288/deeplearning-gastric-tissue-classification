@@ -4,21 +4,21 @@ Leverage the [HMU-GC-HE-30K dataset](https://www.nature.com/articles/s41597-025-
 
 TME components play a critical role in gastric cancer progression, immune tolerance, and treatment response. However, detailed TME-annotated image datasets are scarce. This dataset addresses that gap by providing 30,000+ expert-labeled patches across eight biologically meaningful tissue types, along with matched clinical metadata.
 
-Unlike simple tumor vs non-tumor classification, which provides only coarse segmentation, TME-based classification captures the diverse cellular and structural components within the tumor region that are known to influence tumor progression, immune evasion, and treatment response. By modeling these fine-grained patterns, the goal is to:
+Unlike simple tumor vs non-tumor classification, which provides only coarse segmentation, TME-based classification captures the diverse cellular and structural components within the tumor region that are known to influence tumor progression, immune evasion, and treatment response. By modeling these fine-grained patterns, this project focuses on:
 
-- Explore TME composition patterns in gastric cancer
-- Link tissue patterns with clinical features
-- Lay the groundwork for biomarker discovery and prognosis modeling
+- Building and evaluating deep learning models for patch-level TME classification
+- Using Grad-CAM and prediction confidence to interpret model decisions
+- Identifying common failure cases and potential data issues through visualization
 
 ---
 
-## Project Plan
-- ⏳ Multi-class classification (8 TME tissue types)
-- ⏳ Use transfer learning (e.g., ResNet, EfficientNet)
-- ⏳ Apply Grad-CAM for interpretability
-- ⏳ Explore patch-level TME composition analysis per patient
-- ⏳ Build basic multimodal links with clinical metadata
-- ⏳ Deploy a minimal Streamlit demo app
+## Project Deliverables
+- ✔️ Multi-class classifier (EfficientNetB3) for 8 TME tissue classes
+- ✔️ Grad-CAM for model interpretability and debugging
+- ✔️ Patch-level prediction audit and confidence analysis
+- ✔️ Analysis notebooks covering training, misclassifications, and error cases
+- ✔️ Interactive Streamlit demo: PathoPredictX-GC
+
 
 ---
 
@@ -28,43 +28,76 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 **Format**: 224×224 image tiles  
 **Classes** (all tumor microenvironment components):
 
-- `TUM` – Tumor epithelium  
-- `STR` – Cancer-associated stroma  
-- `LYM` – Lymphocyte aggregates  
-- `NOR` – Normal gastric mucosa (within tumor context, for reference)  
-- `ADI` – Adipose tissue  
-- `MUC` – Mucus  
-- `MUS` – Smooth muscle  
-- `DEB` – Debris  
+- `ADI` – Adipose
+- `DEB` – Debris
+- `LYM` – Lymphocytes
+- `MUC` – Mucus
+- `MUS` – Smooth Muscle  
+- `STR` – Cancer-associated Stroma  
+- `NOR` – Normal Gastric Mucosa (NORM)
+- `TUM` – Tumor
+
 
 ---
 
+## Model Architecture and Training
+
+- Pretrained EfficientNetB3 fine-tuned for 8-way classification
+- Early stopping and learning rate scheduling
+- Model evaluation using macro F1 and confusion matrix
+
+## PathoPredictX-GC: Interactive Auditing & Interpretability Tool
+
+As part of this project, I built PathoPredictX-GC, a lightweight Streamlit app that enables visual auditing of model predictions in gastric cancer histopathology.
+
+Key Features:
+
+    Predicts tissue type from any 224×224 histology patch
+
+    Visualizes class-specific attention using Grad-CAM
+
+    Displays prediction confidence alongside ground truth
+
+    Helps spot:
+
+        Model confusion in mixed-tissue regions
+
+        Label noise or annotation errors
+
+        Poor staining or image artifacts
+
+
+Why it matters:
+
+This tool supports interpretability, quality control, and human-AI collaboration:
+
+    When predictions diverge from the ground truth, Grad-CAM helps assess whether the model made a biologically reasonable call, which is useful for identifying label issues.
+
+    In the absence of ground truth, confidence scores and attention maps provide a second-opinion system for expert review.
+
+    Helps researchers identify blind spots in model performance and surface underlying data issues.
+
+Use it here: https://huggingface.co/spaces/Lekshmi288/PathoPredictX-GC
+    
 ## Repository Structure
 
-- `deeplearning-gastric-tissue-classification/`
-  - `Data/` – Raw image patches (not uploaded)
-  - `notebooks/` – EDA, training notebooks
-  - `src/` – Python scripts (training, models, utils)
-  - `outputs/` – Saved models, logs, metrics
-  - `README.md`
+deeplearning-gastric-tissue-classification/
+│
+├── notebooks/               # EDA, training notebooks
+├── validation_results/      # csv files showing the validation results 
+├── PathoPredictX-GC-app/    # Streamlit app files
+│   ├── src/
+│   ├── Dockerfile
+│   └── requirements.txt
+└── README.md
+
 
 
 ---
 
-## Progress Tracker
-
-- [x] Environment setup
-- [x] Dataset exploration
-- [x] Baseline Multi-class classifier for all 8 tissue types
-- [x] Fine-tuned multi-class classifier for all 8 tissue types
-- [x] Grad-CAM visualizations for model explanation
-- [ ] Compute TME composition (% per tissue per patient)
-- [ ] Merge image-level features with clinical metadata
-- [ ] Statistical modeling or ML-based prognosis predictions
-- [ ] Streamlit deployment (optional)
 
 ## 📌 Notes
 
 - Some tissue classes (e.g., adipose, smooth muscle) are biologically “normal” tissues but still part of the **tumor context** and can play roles in progression or immune evasion.
-- This is not a normal-vs-cancer dataset. All patches come from gastric cancer samples. Labels represent **TME composition**, not pathology status.
-
+- This is not a normal vs cancer dataset. All patches come from gastric cancer samples.
+- No clinical prediction modeling was attempted due to a lack of sufficient metadata integration. While the clinical metadata of the patients was provided as a CSV file, no mapping between the image files and the metadata was available. 
