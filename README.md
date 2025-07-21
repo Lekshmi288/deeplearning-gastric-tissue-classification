@@ -14,9 +14,13 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 
 ## Project Deliverables
  ✔️ Multi-class classifier (EfficientNetB3) for 8 TME tissue classes
+ 
  ✔️ Grad-CAM for model interpretability and debugging
+ 
  ✔️ Patch-level prediction audit and confidence analysis
+ 
  ✔️ Analysis notebooks covering training, misclassifications, and error cases
+ 
  ✔️ Interactive Streamlit demo: PathoPredictX-GC
 
 
