@@ -39,7 +39,7 @@ Unlike simple tumor vs non-tumor classification, which provides only coarse segm
 - `MUC` – Mucus
 - `MUS` – Smooth Muscle  
 - `STR` – Cancer-associated Stroma  
-- `NOR` – Normal Gastric Mucosa (NORM)
+- `NOR` – Normal Gastric Mucosa
 - `TUM` – Tumor
 
 
